@@ -1,0 +1,36 @@
+.wrap { padding-top: 48px; display: grid; gap: 32px; }
+.head h1 { font-size: clamp(2rem, 5vw, 3rem); }
+.head p { color: var(--text-muted); margin-top: 10px; max-width: 62ch; }
+.crumb { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 14px; }
+.crumb a:hover { color: var(--text); }
+.grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { padding: 8px 16px; border-radius: var(--r-pill); border: 1px solid var(--glass-border); background: var(--glass-bg); font-size: 0.85rem; font-weight: 600; }
+.chipOn { background: var(--accent); color: var(--on-accent); border-color: transparent; }
+.section { padding: 8px; }
+.sectionHead { display: flex; align-items: center; gap: 12px; padding: 16px 18px 8px; }
+.sectionHead h2 { font-size: 1.15rem; }
+.list { margin: 0; padding: 0 0 8px; list-style: none; }
+.row { display: flex; align-items: center; gap: 14px; padding: 12px 18px; border-radius: 16px; }
+a.row:hover { background: var(--glass-bg-strong); }
+.rowMain { flex: 1; min-width: 0; display: grid; }
+.rowTitle { font-weight: 600; }
+.rowSub { font-size: 0.8rem; color: var(--text-muted); }
+.done { color: var(--success); }
+.muted { color: var(--text-muted); }
+.stats { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); }
+.stat { padding: 22px; }
+.stat b { display: block; font-size: 2.2rem; letter-spacing: -0.03em; }
+.stat span { color: var(--text-muted); font-size: 0.85rem; }
+.line { display: grid; gap: 18px; position: relative; padding-left: 26px; }
+.line::before { content: ''; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px; background: var(--line); }
+.node { position: relative; padding: 22px 24px; }
+.node::before { content: ''; position: absolute; left: -26px; top: 28px; width: 16px; height: 16px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--bg); }
+.nodeSoon::before { background: var(--text-faint); }
+.steps { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.empty { padding: 28px; text-align: center; color: var(--text-muted); }
+.input { width: 100%; height: 56px; padding: 0 20px; border-radius: var(--r-input); border: 1px solid var(--glass-border); background: var(--glass-bg); color: var(--text); font: inherit; font-size: 1.05rem; }
+.input:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 2px; }
+.center { text-align: center; padding-block: 96px; display: grid; gap: 16px; justify-items: center; }
+.center h1 { font-size: clamp(3rem, 10vw, 6rem); }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }

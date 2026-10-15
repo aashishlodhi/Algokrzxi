@@ -1,0 +1,58 @@
+/* Reusable liquid-glass primitives. Compose with layout classes; never restyle per page. */
+.glass {
+  position: relative;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-panel);
+  box-shadow: var(--glass-shadow), inset 0 1px 0 var(--glass-highlight);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+}
+.glass::after { /* specular sheen */
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--glass-sheen);
+  pointer-events: none;
+}
+.glass--card { border-radius: var(--r-card); }
+.glass--pill { border-radius: var(--r-pill); }
+
+/* fallbacks: no blur support, or user asked for less transparency */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass { background: var(--solid); }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .glass { background: var(--solid); -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .glass::after { display: none; }
+}
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  height: 44px; padding: 0 20px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  font-weight: 600; font-size: 0.9rem;
+  transition: transform var(--dur) var(--ease), background var(--dur) var(--ease);
+}
+.btn:hover { background: var(--glass-bg-strong); }
+.btn:active { transform: scale(0.97); }
+.btn--primary { background: var(--accent); border-color: transparent; color: var(--on-accent); }
+.btn--primary:hover { background: var(--accent-strong); }
+.btn--solid { background: var(--inverse-bg); color: var(--inverse-text); border-color: transparent; }
+.btn--solid:hover { background: var(--inverse-bg); opacity: 0.88; }
+
+.icon-btn {
+  display: inline-grid; place-items: center;
+  width: 40px; height: 40px;
+  border-radius: var(--r-pill);
+  border: 0; background: transparent; color: var(--text-muted);
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.icon-btn:hover { background: var(--glass-bg-strong); color: var(--text); }
+
+.pill { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: var(--r-pill); font-size: 0.75rem; font-weight: 700; background: var(--accent-soft); color: var(--accent-2); }
+.pill--danger { background: var(--danger); color: #fff; letter-spacing: 0.02em; }
+.kbd { padding: 2px 8px; border-radius: 8px; border: 1px solid var(--glass-border); background: var(--glass-bg); font-size: 0.75rem; color: var(--text-muted); }

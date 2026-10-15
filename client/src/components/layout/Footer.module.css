@@ -1,0 +1,9 @@
+.footer { margin-top: 96px; border-top: 1px solid var(--line); padding-top: 48px; color: var(--text-muted); }
+.grid { display: grid; gap: 32px; grid-template-columns: 1fr 1fr; }
+.about { grid-column: 1 / -1; max-width: 420px; font-size: 0.9rem; }
+.name { display: block; margin-bottom: 8px; font-size: 1.1rem; color: var(--text); letter-spacing: -0.02em; }
+.heading { margin-bottom: 12px; font-size: 0.8rem; letter-spacing: 0.02em; color: var(--text); }
+.footer ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; font-size: 0.9rem; }
+.footer a:hover { color: var(--text); }
+.base { padding-block: 32px; font-size: 0.8rem; }
+@media (min-width: 720px) { .grid { grid-template-columns: 2fr 1fr 1fr; } .about { grid-column: auto; } }

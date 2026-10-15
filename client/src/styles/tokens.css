@@ -1,0 +1,83 @@
+/* Every design token lives here. Components never hardcode colors, radii or blur. */
+:root {
+  color-scheme: dark;
+
+  /* BRAND PALETTE: edit this block (and the light block below) to rebrand */
+  --bg: #0a090d;
+  --glow-1: rgba(255, 166, 43, 0.15);
+  --glow-2: rgba(52, 211, 192, 0.1);
+  --text: #f6f3ee;
+  --text-muted: #a39e96;
+  --text-faint: #7a756d;
+  --accent: #ffa62b;
+  --accent-2: #ffc062;
+  --accent-soft: rgba(255, 166, 43, 0.14);
+  --accent-strong: #e38a0a;
+  --teal: #34d3c0;
+  --danger: #d92d3f;
+  --success: #4ade80;
+  --line: rgba(255, 255, 255, 0.12);
+  --solid: #131118;
+  --on-accent: #1a1204;
+  --inverse-bg: #f6f3ee;
+  --inverse-text: #15110a;
+  /* callouts */
+  --c-note: #34d3c0; --c-warning: #ffa62b; --c-pitfall: #ff5d6c; --c-tip: #4ade80; --c-interview: #a99bff;
+
+  /* liquid glass */
+  --glass-bg: rgba(255, 255, 255, 0.06);
+  --glass-bg-strong: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-highlight: rgba(255, 255, 255, 0.28);
+  --glass-sheen: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0) 45%);
+  --glass-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+  --glass-blur: 24px;
+  --glass-saturate: 170%;
+
+  /* radii */
+  --r-card: 28px;
+  --r-panel: 20px;
+  --r-input: 16px;
+  --r-pill: 999px;
+
+  /* type */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  /* layout and motion */
+  --container: 1280px;
+  --gutter: clamp(16px, 4vw, 40px);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur: 220ms;
+  --z-nav: 50;
+  --z-overlay: 80;
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+  --bg: #f7f3ec;
+  --glow-1: rgba(255, 166, 43, 0.22);
+  --glow-2: rgba(52, 211, 192, 0.14);
+  --text: #15110a;
+  --text-muted: #5b5448;
+  --text-faint: #7d7668;
+  --accent: #b45f00;
+  --accent-2: #9a5200;
+  --accent-soft: rgba(180, 95, 0, 0.1);
+  --accent-strong: #8f4b00;
+  --teal: #0f7f73;
+  --danger: #c4202f;
+  --success: #1b8a45;
+  --line: rgba(40, 28, 10, 0.14);
+  --solid: #ffffff;
+  --on-accent: #ffffff;
+  --inverse-bg: #15110a;
+  --inverse-text: #ffffff;
+  --c-note: #0f7f73; --c-warning: #b45f00; --c-pitfall: #c4202f; --c-tip: #1b8a45; --c-interview: #5b45d6;
+  --glass-bg: rgba(255, 255, 255, 0.62);
+  --glass-bg-strong: rgba(255, 255, 255, 0.82);
+  --glass-border: rgba(40, 28, 10, 0.12);
+  --glass-highlight: rgba(255, 255, 255, 0.9);
+  --glass-sheen: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 50%);
+  --glass-shadow: 0 10px 34px rgba(80, 50, 10, 0.14);
+}

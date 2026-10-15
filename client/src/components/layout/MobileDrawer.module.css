@@ -1,0 +1,14 @@
+.root { position: fixed; inset: 0; z-index: var(--z-overlay); visibility: hidden; transition: visibility 0s 300ms; }
+.root.open { visibility: visible; transition-delay: 0s; }
+.scrim { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.5); opacity: 0; transition: opacity 300ms var(--ease); }
+.open .scrim { opacity: 1; }
+.sheet { position: absolute; top: 8px; right: 8px; bottom: 8px; width: min(380px, calc(100% - 16px)); padding: 16px; overflow: auto; border-radius: 28px; transform: translateX(110%); transition: transform 320ms var(--ease); background: var(--solid); }
+.open .sheet { transform: none; }
+.head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; font-size: 1.1rem; }
+.group { border-bottom: 1px solid var(--line); }
+.trigger { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 4px; border: 0; background: transparent; text-align: left; }
+.t { display: block; font-weight: 600; }
+.s { display: block; font-size: 0.78rem; color: var(--text-muted); }
+.flip { transform: rotate(180deg); }
+.body { display: grid; gap: 12px; padding: 0 0 14px; }
+.h { margin: 4px 0; font-size: 0.8rem; font-weight: 600; color: var(--text-muted); letter-spacing: 0; }

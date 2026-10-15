@@ -1,0 +1,13 @@
+.root { position: fixed; inset: 0; z-index: calc(var(--z-overlay) + 10); display: flex; justify-content: center; align-items: flex-start; padding: 12vh 16px 16px; background: rgba(0, 0, 0, 0.5); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.box { width: min(640px, 100%); border-radius: 26px; overflow: hidden; background: var(--solid); animation: pop 220ms var(--ease); }
+@keyframes pop { from { opacity: 0; transform: scale(0.97) translateY(-6px); } }
+.field { display: flex; align-items: center; gap: 12px; padding: 16px 20px; border-bottom: 1px solid var(--line); color: var(--text-muted); }
+.field input { flex: 1; min-width: 0; border: 0; background: transparent; color: var(--text); font: inherit; font-size: 1.05rem; outline: none; }
+.list { margin: 0; padding: 8px; list-style: none; max-height: min(55vh, 420px); overflow: auto; }
+.row { width: 100%; display: flex; gap: 14px; align-items: center; padding: 10px 12px; border: 0; border-radius: 14px; background: transparent; text-align: left; }
+.on { background: var(--accent-soft); }
+.type { flex: none; width: 56px; font-size: 0.7rem; font-weight: 600; color: var(--accent-2); }
+.main { display: grid; min-width: 0; }
+.title { font-weight: 600; }
+.sub { font-size: 0.78rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.empty { padding: 20px; color: var(--text-muted); font-size: 0.9rem; }

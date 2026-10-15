@@ -1,0 +1,4 @@
+.bar { position: relative; display: flex; align-items: center; justify-content: center; padding: 10px 48px; background: var(--accent); color: var(--on-accent); }
+.text { font-size: 0.8rem; font-weight: 600; text-align: center; line-height: 1.4; }
+.close { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); display: grid; place-items: center; width: 28px; height: 28px; border: 0; border-radius: var(--r-pill); background: transparent; color: var(--on-accent); opacity: 0.8; }
+.close:hover { background: rgba(0, 0, 0, 0.14); opacity: 1; }

@@ -1,0 +1,26 @@
+.grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
+.card { display: flex; flex-direction: column; overflow: hidden; }
+.badge { position: absolute; top: 16px; left: 16px; z-index: 1; }
+.art { display: grid; place-items: center; min-height: 240px; padding: 28px 20px 8px; background: radial-gradient(70% 80% at 50% 40%, var(--accent-soft), transparent 75%); }
+.body { padding: 20px 24px 26px; border-top: 1px solid var(--line); }
+.body h3 { font-size: 1.3rem; margin-bottom: 8px; }
+.body p { color: var(--text-muted); font-size: 0.95rem; }
+.svg { width: 100%; max-width: 380px; }
+.wire { fill: none; stroke: var(--teal); stroke-width: 2; stroke-dasharray: 4 6; opacity: 0.8; }
+.node, .nodeHot { fill: var(--solid); stroke: var(--line); stroke-width: 1.5; }
+.nodeHot { stroke: var(--accent); }
+.label { fill: var(--text); font: 600 14px var(--font-sans); }
+.pin { fill: var(--accent); opacity: 0.8; }
+.dot { fill: var(--accent-2); filter: drop-shadow(0 0 8px var(--accent)); }
+.regWrap { display: grid; gap: 18px; justify-items: center; }
+.regRow { display: flex; gap: 6px; }
+.bit { display: grid; place-items: end center; width: 30px; height: 44px; border-radius: 10px; border: 1px solid var(--line); background: var(--solid); animation: flip 3.2s var(--d) infinite; }
+.bit small { margin-bottom: 4px; color: var(--text-muted); font: 500 0.65rem var(--font-mono); }
+@keyframes flip { 0%, 40% { background: var(--solid); border-color: var(--line); } 50%, 90% { background: var(--accent-soft); border-color: var(--accent); } 100% { background: var(--solid); } }
+.code { padding: 6px 14px; border-radius: 12px; background: var(--glass-bg-strong); color: var(--accent-2); font-size: 0.9rem; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.chat { display: grid; gap: 14px; width: 100%; max-width: 360px; font-size: 0.88rem; }
+.q, .a { padding: 12px 16px; border-radius: 20px; line-height: 1.45; }
+.q { display: flex; gap: 10px; align-items: flex-start; background: var(--glass-bg-strong); border-bottom-left-radius: 6px; margin-right: 24px; }
+.av { flex: none; display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--teal); color: #05110f; font-weight: 700; font-size: 0.8rem; }
+.a { background: var(--accent); color: var(--on-accent); border-bottom-right-radius: 6px; margin-left: 24px; font-weight: 500; }

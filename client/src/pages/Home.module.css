@@ -1,0 +1,17 @@
+.hero { display: grid; justify-items: center; text-align: center; padding-top: clamp(56px, 10vw, 120px); padding-bottom: 24px; gap: 22px; }
+.h1 { font-size: clamp(2.5rem, 7.5vw, 5.4rem); font-weight: 800; letter-spacing: -0.045em; max-width: 14ch; line-height: 1.02; }
+.h1 span { color: var(--accent); }
+.lead { max-width: 60ch; color: var(--text-muted); font-size: clamp(1rem, 2vw, 1.2rem); }
+.eyebrow { display: flex; align-items: center; gap: 16px; width: min(100%, 560px); color: var(--text-muted); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.22em; }
+.eyebrow i { flex: 1; height: 1px; background: var(--line); }
+.search { display: flex; align-items: center; gap: 14px; width: min(100%, 760px); height: 64px; padding: 0 16px 0 24px; color: var(--text-muted); font-size: 1.02rem; text-align: left; transition: transform var(--dur) var(--ease); }
+.search:hover { transform: translateY(-2px); }
+.search span { flex: 1; }
+.section { padding-top: clamp(56px, 9vw, 104px); }
+.h2 { text-align: center; font-size: clamp(1.7rem, 4vw, 2.4rem); margin-bottom: 36px; }
+.modules { display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+.steps { margin: 0; padding: 0; list-style: none; display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); counter-reset: s; }
+.steps li { padding: 28px; display: grid; gap: 8px; align-content: start; }
+.steps h3 { font-size: 1.15rem; }
+.steps p { color: var(--text-muted); font-size: 0.93rem; }
+.num { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--accent); color: var(--on-accent); font-weight: 700; margin-bottom: 8px; }

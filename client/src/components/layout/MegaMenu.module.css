@@ -1,0 +1,15 @@
+.panel { position: absolute; top: calc(100% + 8px); left: 12px; right: 12px; max-width: 1480px; margin-inline: auto; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(220px, 1fr); gap: 0; padding: 24px 8px; border-radius: 28px; max-height: calc(100vh - 140px); overflow: auto; animation: drop 240ms var(--ease); }
+@keyframes drop { from { opacity: 0; transform: translateY(-6px); } }
+.col { padding: 0 20px; display: grid; align-content: start; gap: 6px; }
+.col + .col { border-left: 1px solid var(--line); }
+.heading { margin-bottom: 8px; font-size: 0.85rem; font-weight: 600; color: var(--text-muted); letter-spacing: 0; }
+.item { display: flex; gap: 12px; padding: 10px 10px; border-radius: 16px; transition: background var(--dur) var(--ease); }
+a.item:hover { background: var(--glass-bg-strong); }
+.locked { opacity: 0.5; cursor: default; }
+.icon { flex: none; width: 34px; height: 34px; display: grid; place-items: center; border-radius: 12px; background: var(--accent-soft); color: var(--accent-2); }
+.text { display: grid; gap: 2px; min-width: 0; }
+.title { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.98rem; }
+.desc { font-size: 0.8rem; line-height: 1.4; color: var(--text-muted); }
+.badge { padding: 1px 8px; font-size: 0.65rem; }
+.cta { justify-self: start; margin-top: 6px; padding: 5px 12px; border-radius: var(--r-pill); background: var(--accent); color: var(--on-accent); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.03em; }
+@media (max-width: 1099px) { .panel { display: none; } }
